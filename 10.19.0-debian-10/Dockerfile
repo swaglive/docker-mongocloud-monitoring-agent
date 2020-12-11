@@ -4,7 +4,6 @@ ARG         VERSION=10.22.0.6667-1
 
 RUN         apk add --no-cache --virtual .build-deps \
                 curl ca-certificates && \
-
             curl -sL -o - https://cloud.mongodb.com/download/agent/automation/mongodb-mms-automation-agent-$VERSION.linux_x86_64.tar.gz | tar xz && \
             mkdir -p /etc/mongodb-mms-automation-agent && \
             mv mongodb-mms-automation-agent-$VERSION.linux_x86_64/mongodb-mms-automation-agent /usr/local/bin/mongodb-mms-automation-agent && \
